@@ -1,11 +1,12 @@
-load './hash.rb'
-load "./route.rb"
-load "./railways_station.rb"
-load "./train.rb"
-load "./cargo_train.rb"
-load "./passanger_train.rb"
-load "./cargo_car.rb"
-load "./passanger_car.rb"
+require './hash.rb'
+require "./route.rb"
+require "./railways_station.rb"
+require "./train.rb"
+require "./cargo_train.rb"
+require "./passanger_train.rb"
+require "./cargo_car.rb"
+require "./passanger_car.rb"
+require "./company_name.rb"
 
 # st1 = RailwayStation.new("Салам")
 # st2 = RailwayStation.new("Львів")
@@ -25,20 +26,53 @@ load "./passanger_car.rb"
 #
 # train1 = CargoTrain.new( "Грузовий" , 24)
 
-ct = CargoTrain.new
+# ct = CargoTrain.new
+#
+# cargo = CargoCar.new("OREO")
+#
+# ct.add_car(cargo)
+#
+# puts ct.cars_count
+#
+# ct.delete_car(cargo)
+#
+# puts ct.cars_count
+#
+# station = RailwayStation.new("Aboba")
+#
+# station.acceptance_of_train(ct)
+#
+# station.all_trains
 
-cargo = CargoCar.new("OREO")
+# st1 = RailwayStation.new("Салам")
+# st2 = RailwayStation.new("Львів")
+# st3 = RailwayStation.new("Київ")
+# st4 = RailwayStation.new("Алекум")
+#
+# RailwayStation.all
+#
+# train = Train.new
+# trai = Train.new
+# rain = Train.new
+#
+# Train.find(2)
+# st1 = RailwayStation.new("Aboba")
+# st2 = RailwayStation.new("aww")
+# train = Train.new("Calo", "q")
+# train = Train.new("adw", "as1-ws")
+#
+# puts Train.instances
 
-ct.add_car(cargo)
+# c = CargoCar.new("Boba")
+# p = PassangerCar.new("Aboba")
+# pt = PassangerTrain.new("Biba", "qw1")
+#
+# pt.add_car(p)
+# pt.add_car(c)
+ st1 = RailwayStation.new("awdawd")
+ st2 = RailwayStation.new("wadawd")
 
-puts ct.cars_count
-
-ct.delete_car(cargo)
-
-puts ct.cars_count
-
-station = RailwayStation.new("Aboba")
-
-station.acceptance_of_train(ct)
-
-station.all_trains
+s = RailwayStation.new("loh")
+r = Route.new(st2, st1)
+r.add_station(s)
+ puts r.station_list

@@ -5,7 +5,7 @@ class CargoTrain < Train
     if car_name.class == CargoCar
       @cars.push car_name
     else
-      puts "Вагон не підходить"
+      validate_car_type
     end
   end
 end
