@@ -11,6 +11,7 @@ class RailwayStation
     @name = name
     @@all_stations.push name
     @all_trains = []
+    block = lambda { |x| puts x}
     validate!
   end
 
@@ -21,6 +22,11 @@ class RailwayStation
     rescue Exception => e
       puts "Exception: #{e.message}"
     end
+  end
+
+  def caps(name, block)
+    name.capitalize
+    block.call(name)
   end
 
   def self.all

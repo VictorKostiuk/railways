@@ -3,6 +3,7 @@ require "./passanger_car.rb"
 require "./cargo_car.rb"
 require "./company_name.rb"
 require "./instance_counter.rb"
+require './blocks.rb'
 
 class Train
   include CompanyName
@@ -52,6 +53,19 @@ class Train
       raise "Тип вагону не підходить"
     rescue Exception => e
       puts "Exception: #{e.message}"
+    end
+  end
+
+  # def cars(t)
+  #   i = 0
+  #   t.cars_count.each do i += 1
+  #     t.cars_count[i]
+  #   end
+  # end
+
+  def cars
+    @cars.each do |car|
+      yield(car)
     end
   end
 

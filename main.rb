@@ -69,10 +69,34 @@ require "./company_name.rb"
 #
 # pt.add_car(p)
 # pt.add_car(c)
- st1 = RailwayStation.new("awdawd")
- st2 = RailwayStation.new("wadawd")
+#  st1 = RailwayStation.new("awdawd")
+#  st2 = RailwayStation.new("wadawd")
+#
+# s = RailwayStation.new("loh")
+# r = Route.new(st2, st1)
+# r.add_station(s)
+#  puts r.station_list
 
-s = RailwayStation.new("loh")
-r = Route.new(st2, st1)
-r.add_station(s)
- puts r.station_list
+# t = CargoTrain.new("boba", "aw1")
+# c = CargoCar.new("Boa")
+# b = CargoCar.new("Bba")
+# a = CargoCar.new("Boda")
+# t.add_car(c)
+# t.add_car(b)
+# t.add_car(a)
+
+t = PassangerTrain.new("boba", "aw1")
+c = PassangerCar.new("Boa")
+b = PassangerCar.new("Bba")
+a = PassangerCar.new("Boda")
+t.add_car(c)
+t.add_car(b)
+t.add_car(a)
+
+
+# t.cars{  i = t.cars_count
+# 3.times do i += 1
+# puts t.cars_count[i]
+# end}
+
+t.cars { |car| puts car.name }

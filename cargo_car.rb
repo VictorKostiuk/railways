@@ -1,7 +1,9 @@
 require "./company_name.rb"
-CAR_TYPE = "Cargo"
+
 
 class CargoCar
+  attr_reader :name
+  CAR_TYPE = "Cargo"
   include CompanyName
   def initialize(name)
     @name = name
